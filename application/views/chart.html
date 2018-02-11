@@ -1,0 +1,34 @@
+<html>
+	<head>
+	
+
+	<style>
+	.chart-container{
+	width:640px;
+	height:auto;
+	}
+	</style>
+	
+	</head>
+	<body>
+	<div class="chart-container">
+		<canvas id="mycanvas"></canvas>
+	</div>
+	
+	<script type="text/javascript" src="<?php echo ASSETS;?>/Chart.min.js"></script>
+	
+	<script>
+	var url = <?php echo SITEURL; ?>+'Brand/dashboard_ajax';
+	$(document).ready(function()){
+	$.ajax({
+		url:url,
+		type:"POST"
+		success:function(data){
+			console.log(data);
+			},error:function(data){
+			alert("error");
+			}
+		})
+	}
+	</script>
+	</body>

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Work Sans'), local('WorkSans-Regular'), url(http://fonts.gstatic.com/s/worksans/v2/WB2LNay3rHMH1zU8UJnUHKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Work Sans Bold'), local('WorkSans-Bold'), url(http://fonts.gstatic.com/s/worksans/v2/4udXuXg54JlPEP5iKO5AmdqQynqKV_9Plp7mupa0S4g.ttf) format('truetype');
+}

@@ -1,0 +1,687 @@
+/*
+Feb 18, 2017
+
+Style for index page i.e front-end.
+*/
+*{
+    font-family: font1;
+}
+@font-face{
+    font-family:font1;
+    src:url(../fonts/Montserrat/Montserrat-Light.ttf);
+
+}
+
+header{
+    width:100%;
+    height:80px;
+}
+header .navbar-brand{
+    line-height: 50px;
+    font-size: 34px;
+}
+
+body:before{
+
+
+}
+header .navbar{
+    background: #2c2f40;
+    background:rgba(0, 0, 0, 0.19);
+    border: 0px;
+    outline: none;
+    border-radius: 0px;
+    color: white;
+    font-family: font1;
+    font-weight: 600;
+    height: 80px;
+}
+
+header #navigation-menu{
+    margin-top: 14px;
+}
+
+/* Main Section */
+
+.content{
+    padding-top: 10vh;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4{
+    font-family: font1;
+    text-transform: uppercase;
+    font-size:60pt;
+    color: white;
+    font-weight: 700;
+}
+#home{
+    background: cover;
+    margin-top:-100px;
+    padding-top: 80px;
+    height: 600px;
+    background: url(../images/bg/layers/1.png) , url(../images/bg/edge-bg/2.jpg);
+    background-size: 500px 500px ,100% 100vh;
+    background-position: 5% 50%,0px 0px;
+    border-bottom: 3px solid deepskyblue;
+}
+/* Removed background from home */
+#home p {
+    color: white;
+}
+
+.login-btn{
+    background: red;
+    border: 3px solid red;
+    color:white;
+    font-family: font1;
+    font-size: 16px;
+    font-weight:700;
+}
+.login-btn:hover{
+    background: red;
+    border: 3px solid red;
+    color:white;
+    font-family: font1;
+    font-size: 16px;
+    opacity:0.7;
+}
+.submit-btn {
+    background: red;
+}
+
+#what-we-do{
+    background: url(../images/bg/layers/2.png) , url(../images/bg/edge-bg/14.jpg);
+    background-size: 500px 500px ,100% 100vh;
+    background-position: 95% 100%,0px 0px; 
+    border-bottom: 3px solid deepskyblue;
+
+}
+/* Removed background from what-we-do */
+
+#what-we-do h3{
+    color: white;
+    font-family: font1;
+    font-size: 50px;
+}
+
+#what-we-do .ques{
+    color: #00BFFF;
+    font-family: font1;
+    font-size: 50px;
+}
+
+#what-we-do p{
+    color: white;
+}
+
+.card {
+    opacity:0.7;
+    margin-top: -50px;
+    border: 10px solid red;
+    font-family: font1;
+}
+
+.card:hover{
+    opacity:1.0;
+    margin-top: -50px;
+    border: 10px solid red;
+    font-family: font1;
+}
+
+.card .card-title{
+    color: white;
+    font-size: 20px;
+    padding: 5px;  
+} 
+.card .card-text {
+    font-size: 15px;
+}
+
+
+.button .btn{
+    background: #00BFFF;
+    border: 3px solid #00BFFF;
+    color:white;
+    font-family: font1;
+    font-size: 16px;
+    font-weight:700;
+}
+.button .btn:hover{
+    background: #00BFFF;
+    border: 3px solid #00BFFF;
+    color:white;
+    font-family: font1;
+    font-size: 16px;
+    opacity:0.7;
+}
+
+/* This is used in the flip cards in the section: What we do */
+/*
+.wrapper p { 
+    color: #ffffff;  }
+
+/*-=-=-=-=-=-=-=-=-=-*/
+/* Column Grids */
+/*-=-=-=-=-=-=-=-=-= */
+/*
+.col_half { width: 49%; }
+.col_third { width: 32%; }
+.col_fourth { width: 23.5%; }
+.col_fifth { width: 18.4%; }
+.col_sixth { width: 15%; }
+.col_three_fourth { width: 74.5%;}
+.col_twothird{ width: 66%;}
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth{
+    position: relative;
+    display:inline;
+    display: inline-block;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 20px;
+}
+.end { margin-right: 0 !important; }
+
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
+/*
+.wrapper{ 
+    width: 980px; 
+    margin: 0 auto;  
+    background-color: #bdd3de; 
+    hoverflow: hidden;
+}
+
+.wrapper .hover.panel {
+    background: transparent;
+}
+
+.wrapper .panel {
+    margin: 0 auto;
+    height: 130px;  
+    position: relative;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+}
+
+.wrapper .panel .front,
+.wrapper .panel .back {
+    text-align: center;
+}
+
+.wrapper .panel .front {
+    height: inherit;
+    position: absolute;
+    top: 0;
+    z-index: 900;
+    text-align: center;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.wrapper .panel .back {
+    height: inherit;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.wrapper .panel.flip .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+.wrapper .panel.flip .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+.wrapper .box1{
+    background-color: #00BFFF;
+    width: 320px;
+    height: 200px;
+    margin: -50px auto;
+    padding:50px;
+    border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    text-align: center;
+}
+.wrapper .box2{
+    background-color: #ff7e70;
+    width: 320px;
+    height: 200px;
+    margin: -30px auto;
+    padding: 5px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+*/
+/* Design of Flip Card in What we do is over */
+/* Check Box of what we do */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.checkBox {
+    width: 280px;
+    height: 65px;
+    margin: 12px auto;
+    color: #4274D3;
+    font-family: font1;
+    font-size: 20px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    cursor: auto;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+svg rect, svg path, svg polyline {
+    fill: none;
+    stroke: #4274D3;
+    stroke-width: 3;
+}
+
+.checkBox:hover svg polyline {
+    stroke: #4274D3;
+}
+
+/* Check Box */
+.checkBox {
+    /* Add Padding Left To Center Text */
+}
+.checkBox svg {
+    /* Presentation Purposes */
+    margin-left: -30px;
+}
+.checkBox svg rect, .checkBox svg polyline {
+    fill: none;
+    stroke: #4274D3;
+    stroke-width: 1;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+.checkBox:hover svg rect {
+    stroke-width: 2;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+.checkBox:hover svg polyline {
+    stroke-width: 2;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+.checkBox svg .button {
+    stroke-dasharray: 700px, 0;
+}
+.checkBox:hover svg .button {
+    stroke-dasharray: 0, 400px;
+    stroke-dashoffset: 33px;
+}
+/* Check Mark Effect */
+.box, .checkMark {
+    opacity: 0;
+}
+.checkBox:hover .box {
+    -webkit-animation: boxDisplay 0.2s forwards;
+    -moz-animation: boxDisplay 0.2s forwards;
+    -ms-animation: boxDisplay 0.2s forwards;
+    -o-animation: boxDisplay 0.2s forwards;
+    animation: boxDisplay 0.2s forwards;
+    -webkit-animation-delay: 0.65s;
+    -moz-animation-delay: 0.65s;
+    -ms-animation-delay: 0.65s;
+    -o-animation-delay: 0.65s;
+    animation-delay: 0.65s;
+}
+.checkBox:hover .checkMark {
+    -webkit-animation: checkDisplay 0.2s forwards;
+    -moz-animation: checkDisplay 0.2s forwards;
+    -ms-animation: checkDisplay 0.2s forwards;
+    -o-animation: checkDisplay 0.2s forwards;
+    animation: checkDisplay 0.2s forwards;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+/* Check Box Display */
+@-webkit-keyframes boxDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes boxDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes boxDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes boxDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes boxDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Check Mark Display */
+@-webkit-keyframes checkDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes checkDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes checkDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes checkDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes checkDisplay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Check box ends here */
+
+
+
+#social-media-advertizement{
+    background: url(../images/bg/layers/5.png) , url(../images/bg/edge-bg/3.jpg);
+    background-size: 500px 500px ,100% 100vh;
+    background-position: 100% 130%,0px 0px;
+    border-bottom: 3px solid deepskyblue;
+
+}
+
+/* Removed background from Social-media-advertizement */
+
+
+#social-media-advertizement ul.column {
+    float: left;
+    padding: 0;
+    list-style: none;
+    width: 675px;
+    background: #2A6643;    
+}
+#social-media-advertizement ul.column li {
+    background: #fff;
+    float: left;
+    margin: 0px 0 0 25px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding:20px;
+    border-radius: 2px 2px 2px 2px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#social-media-advertizement ul.column li.box1 {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+
+#monetization{
+    background: url(../images/bg/layers/7.png) , url(../images/bg/edge-bg/4.jpg);
+    background-size: 500px 500px ,100% 100vh;
+    background-position: 100% 102%,0px 0px;
+    border-bottom: 3px solid deepskyblue;
+
+}
+/* Removed background from monetization */
+
+#monetization ul.column {
+    float: left;
+    padding: 0;
+    list-style: none;
+    width: 675px;
+    background: #C46AAC;    
+}
+#monetization ul.column li {
+    background: #fff;
+    float: left;
+    margin: 0px 0 0 25px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding:20px;
+    border-radius: 2px 2px 2px 2px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#monetization ul.column li.box1 {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+
+#team{
+    background: url(../images/bg/layers/6.png) , url(../images/bg/edge-bg/11.jpg);
+    background-size: 500px 500px ,100% 100vh;
+    background-position: 0% 100%,0px 0px;
+    border-bottom: 3px solid deepskyblue;
+
+}
+
+/* Team Members Hover design*/
+
+.team-member, .team-member .team-img {
+    position: relative;
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.team-member:hover .team-hover .desk {
+    top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+
+.team-img{
+    height: 150px;
+    width: 90%;
+}
+
+
+
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.team-member .s-link a {
+
+    color: #333;
+    font-size: 16px;
+}
+/* Team Members Hover design*/
+
+#contact-us{
+    background: url(../images/bg/layers/3.png) , url(../images/bg/edge-bg/6.jpg);
+    background-size: 500px 500px ,110% 100vh;
+    background-position: 100% 100%,0px 0px;
+}
+/* Removed background from contact us */
+
+.form-group .btn{
+    background: green;
+    padding: 10px 24px;
+    border: 1px solid darkgreen;
+}
+.form-group .button{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+#home,
+#what-we-do,
+#social-media-advertizement,
+#monetization,
+#team,
+#contact-us{
+    width: auto;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.textarea{
+    resize: none;
+}
+
+
+
+
+footer { background-color:#0c1a1e; min-height:320px; font-family: font1; }
+.footerleft { margin-top:50px; padding:0 36px; }
+.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
+
+.footerleft p { color:#fff; font-size:12px !important; font-family: font1; margin-bottom:15px;}
+.footerleft p i { width:20px; color:#999;}
+
+
+.paddingtop-bottom {  margin-top:50px;}
+.footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
+.footer-ul li { line-height:29px; font-size:12px;}
+.footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+.footer-ul i { margin-right:10px;}
+.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+
+.icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+.icon-ul li { line-height:75px; width:100%; float:left;}
+.icon { float:left; margin-right:5px;}
+
+
+.copyright { min-height:40px; background-color:#000000;}
+.copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+.heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+.post p { font-size:12px; color:#FFF; line-height:20px;}
+.post p span { display:block; color:#8f8f8f;}
+.bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+.bottom_ul li { float:left; line-height:40px;}
+.bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+.bottom_ul li a { color:#FFF;  font-size:12px;}
+
+
+
+#home div :nth-child(1){
+    font-size:30pt; font-weight: 700; font-family: font1;letter-spacing: 1.5px;
+}
+#home div :nth-child(2){
+    font-size:30pt; font-weight: 700; font-family: font1;letter-spacing: 1.5px;
+}
+#home div :nth-child(3){
+    font-size:30pt; font-weight: 700; font-family: font1;letter-spacing: 1.5px;
+}
+#home div :nth-child(4){
+    font-size:30pt; font-weight: 700; font-family: font1;letter-spacing: 1.5px;
+}
+.team-img{
+    width: 150px;
+    margin:5px;
+}
+
+
